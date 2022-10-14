@@ -1,11 +1,11 @@
 # Alerts
 
-'''import time
+import time
 from selenium import webdriver
 driver=webdriver.Chrome()
 from selenium.webdriver.common.by import By
-#driver.get('https://the-internet.herokuapp.com/javascript_alerts')
-#driver.maximize_window()
+driver.get('https://the-internet.herokuapp.com/javascript_alerts')
+driver.maximize_window()
 driver.find_element(By.XPATH,'//*[@id="content"]/div/ul/li[3]/button').click()
 time.sleep(5)
 alerts=driver.switch_to.alert
@@ -19,7 +19,7 @@ driver.quit()
 
 # Authentication Popup (Used Injection method providing username and password)
 
-driver.get('https://the-internet.herokuapp.com/basic_auth')
+'''driver.get('https://the-internet.herokuapp.com/basic_auth')
 
 #driver.get('https://admin:admin@the-internet.herokuapp.com/basic_auth')
 driver.maximize_window()
@@ -67,7 +67,7 @@ driver.quit()'''
 
 # Browser window (Need to pass window ID)
 
-import time
+'''import time
 from selenium import webdriver
 driver=webdriver.Chrome()
 driver.implicitly_wait(10)
@@ -77,7 +77,7 @@ driver.maximize_window()
 time.sleep(3)
 driver.find_element(By.XPATH,'/html/body/div/div[1]/div/div[1]/div/div[2]/div[3]/div[2]/p[2]/a').click()
 wid=driver.window_handles
-'''PW=wid[0]
+PW=wid[0]
 CW=wid[1]
 driver.switch_to.window(CW)
 driver.find_element(By.XPATH,'//*[@id="linkadd"]').click()
@@ -87,8 +87,8 @@ driver.find_element(By.XPATH,'//*[@id="linkadd"]').click()
     driver.switch_to.window(winid)
     print(driver.title)'''
 
-for winid in wid:
+'''for winid in wid:
     driver.switch_to.window(winid)
     if driver.title=="OrangeHRM":
-        driver.close()
+        driver.close()'''
 

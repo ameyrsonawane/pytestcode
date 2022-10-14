@@ -18,12 +18,31 @@ driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[2]/div[
 wid=driver.window_handles
 PW=wid[0]
 CW=wid[1]
+
 driver.switch_to.window(CW)
-driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[2]/form/button').click()
-hold=driver.find_element(By.XPATH,'/html/body/div/div/div[2]/div[2]/p')
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button').click()
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input').send_keys("Dell Laptop")
 time.sleep(5)
-act=ActionChains(driver)
-act.move_to_element(hold).click().Perform()
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[1]/div[1]/div[2]/div[2]/form/div/button').click()
+time.sleep(5)
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[2]/div[2]/div/div/div/a/div[2]/div[1]/div[1]').click()
+G=driver.window_handles
+GD=G[2]
+driver.switch_to.window(GD)
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button').click()
+time.sleep(5)
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input').send_keys("T Shirt for girls")
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[1]/div[1]/div[2]/div[2]/form/div/button').click()
+time.sleep(5)
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[2]/div[9]/div/div[2]/div/a/div[1]/div/div/div/img').click()
+D=driver.window_handles
+DD=D[3]
+driver.switch_to.window(DD)
+driver.find_element(By.XPATH,'//*[@id="swatch-2-size"]/a').click()
+driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button').click()
+#driver.close(PW[0])
+hold=driver.find_element(By.XPATH,'//*[@id="container"]/div/div[2]/div/div[1]/div[1]/div/div[6]/div/form/button').click()
+
 
 
 
