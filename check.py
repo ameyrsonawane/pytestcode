@@ -1,3 +1,5 @@
+# Flipkart Application
+'''
 import time
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -41,35 +43,34 @@ driver.switch_to.window(DD)
 driver.find_element(By.XPATH,'//*[@id="swatch-2-size"]/a').click()
 driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button').click()
 #driver.close(PW[0])
-hold=driver.find_element(By.XPATH,'//*[@id="container"]/div/div[2]/div/div[1]/div[1]/div/div[6]/div/form/button').click()
+time.sleep(3)
+hold=driver.find_element(By.XPATH,'/html/body/div[1]/div/div[2]/div/div[1]/div[1]/div/div[6]/div/form/button').click()'''
 
 
+# Naukri.com Application
 
-
-
-
-
-
-'''import time
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-driver=webdriver.Chrome()
-driver.get('https://www.flipkart.com/')
+driver = webdriver.Chrome()
+driver.implicitly_wait(10)
+driver.get('https://www.naukri.com/')
 driver.maximize_window()
-#driver.switch_to.alert()
-driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input').send_keys("8550985895")
-time.sleep(2)
-driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input').send_keys("Flipkart#01")
-time.sleep(2)
-driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div/div/div[2]/div/form/div[4]/button').click()
-link=driver.find_elements(By.TAG_NAME,"a")
-print(len(link))
-driver.close()'''
+driver.find_element(By.XPATH,'//*[@id="login_Layer"]').click()
+time.sleep(3)
+driver.find_element(By.XPATH,'//*[@id="root"]/div[4]/div[2]/div/div/div[2]/div/form/div[2]/input').send_keys("amey.sonawane1@gmail.com")
+time.sleep(3)
+driver.find_element(By.XPATH,'//*[@id="root"]/div[4]/div[2]/div/div/div[2]/div/form/div[3]/input').send_keys("Nishtha@sonawane#01")
+time.sleep(3)
+driver.find_element(By.XPATH,'//*[@id="root"]/div[4]/div[2]/div/div/div[2]/div/form/div[6]/button').click()
+driver.find_element(By.XPATH,'//*[@id="root"]/div/div/span/div/div/div/div[2]/div/div[2]/div[1]/div/a[1]/div[2]/div[1]').click()
+time.sleep(3)
+driver.find_element(By.XPATH,'//*[@id="root"]/div/div/span/div/div/div/div/div/div[2]/div[2]/div/div/ul/li[2]/a').click()
 
 
-'''import time
-from selenium import webdriver
-driver=webdriver.Chrome()
-driver.get('https://www.myntra.com/?utm_source=perf_google_search_brand&utm_medium=perf_google_search_brand&utm_campaign=Search_Brand_Myntra_Brand_India_BM_TROAS_SOK&gclid=EAIaIQobChMIorDkuNys-gIVRw8rCh3Nuw70EAAYASAAEgLRuvD_BwE')
-driver.maximize_window()
-driver.find_element(By.XPATH,'')'''
+
+
+
+
+
+
