@@ -2,8 +2,8 @@ import logging
 logging.basicConfig(filename="log file.txt",
                     filemode='a',
                     format='%(asctime)s %(levelname)s-%(message)s',
-                    datefmt='%Y-%m-%d %H:%M:%S')
-score = 34.9
+                    datefmt='%y-%m-%d %H:%M:%S')
+score = 36
 if score > 90:
     logging.warning("Log Warning Message")
     print("1st Rank")

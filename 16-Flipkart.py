@@ -1,5 +1,5 @@
 # Flipkart Application
-'''
+
 import time
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -44,11 +44,13 @@ driver.find_element(By.XPATH,'//*[@id="swatch-2-size"]/a').click()
 driver.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button').click()
 #driver.close(PW[0])
 time.sleep(3)
-hold=driver.find_element(By.XPATH,'/html/body/div[1]/div/div[2]/div/div[1]/div[1]/div/div[6]/div/form/button').click()'''
+hold=driver.find_element(By.XPATH,'/html/body/div[1]/div/div[2]/div/div[1]/div[1]/div/div[6]/div/form/button').click()
+
+
 
 
 # Naukri.com Application
-
+'''
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -60,12 +62,12 @@ driver.find_element(By.XPATH,'//*[@id="login_Layer"]').click()
 time.sleep(3)
 driver.find_element(By.XPATH,'//*[@id="root"]/div[4]/div[2]/div/div/div[2]/div/form/div[2]/input').send_keys("amey.sonawane1@gmail.com")
 time.sleep(3)
-driver.find_element(By.XPATH,'//*[@id="root"]/div[4]/div[2]/div/div/div[2]/div/form/div[3]/input').send_keys("Nishtha@sonawane#01")
+driver.find_element(By.XPATH,'//*[@id="root"]/div[4]/div[2]/div/div/div[2]/div/form/div[3]/input').send_keys("")
 time.sleep(3)
 driver.find_element(By.XPATH,'//*[@id="root"]/div[4]/div[2]/div/div/div[2]/div/form/div[6]/button').click()
 driver.find_element(By.XPATH,'//*[@id="root"]/div/div/span/div/div/div/div[2]/div/div[2]/div[1]/div/a[1]/div[2]/div[1]').click()
 time.sleep(3)
-driver.find_element(By.XPATH,'//*[@id="root"]/div/div/span/div/div/div/div/div/div[2]/div[2]/div/div/ul/li[2]/a').click()
+driver.find_element(By.XPATH,'//*[@id="root"]/div/div/span/div/div/div/div/div/div[2]/div[2]/div/div/ul/li[2]/a').click()'''
 
 
 
