@@ -1,5 +1,5 @@
 # Application Commands
-import time
+'''import time
 from selenium import webdriver
 driver=webdriver.Chrome()
 driver.get('https://opensource-demo.orangehrmlive.com')
@@ -8,11 +8,11 @@ print(driver.title)
 print(driver.current_url)
 print(driver.page_source)
 time.sleep(3)
-driver.close()
+driver.close()'''
 
 # Conditional Commands(True/False/Validation purpose at element level)
 
-'''import time
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 driver=webdriver.Chrome()
@@ -29,7 +29,7 @@ print("Selected_Status:",Mrb.is_selected())
 Mrb.click()
 print("Selected_Status:",Mrb.is_selected())
 time.sleep(3)
-driver.close()'''
+driver.close()
 
 # Browse Commands
 # Driver.close() - Close single browser window
@@ -76,7 +76,7 @@ driver.close()'''
 
 # Text and Get_attribute('value')
 
-# Text can captured inner text of any element
+# Text can capture inner text of any element
 # Get_attribute('value') captured value of any attribute.
 
 

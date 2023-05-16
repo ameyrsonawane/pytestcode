@@ -211,7 +211,7 @@ a.get_attribute('value')
 
 from selenium import webdriver
 driver=webdriver.Chrome()
-driver.get("URL")
+driver.get(Amazon")
 driver.maximize_window()
 
 --> Click on specific checkbox
@@ -249,6 +249,7 @@ checkbox.click()
 for checkboxes in checkbox:
 if checkboxes.is_selected():
 checkboxes.click()
+------------------------------------------------------------------------------------------------------------------------
 
 2) Links-
 
@@ -257,6 +258,70 @@ External Link- click on the link it will navigate some other page
 Broken Link- It also available on web page but it doesn't have target page
 
 --> Actually developers placed the broken link for the future implementation
+
+--> How to click on the link-
+from selenium import webdriver
+driver=webdriver.Chrome()
+driver.get("Facebook")
+driver.maximize_window()
+driver.find_element(By.LINK_TEXT,"Download").click()
+
+--> Count of links
+from selenium import webdriver
+driver=webdriver.Chrome()
+driver.get("Facebook")
+driver.maximize_window()
+link=driver.find_elements(By.TAG_NAME,"a")
+print(len(link))
+
+--> Print all links
+
+for links in link
+print(link.text)
+
+--> How to handle broken links- Firstly we have to capture all href values of the link after that send the request to
+server and server will give the response. If the response or status code is <= 400 then we confirm about the link is
+broken
+
+from selenium import webdriver
+driver=webdriver.Chrome()
+driver.get("Facebook")
+driver.maximize_window()
+link=driver.find_elements(By.TAG_NAME,"a")
+count=0
+for links in link
+url=links.get_attribute('href')
+res=requests.head(url)
+if res.status_code>=400
+print(url,"It is broken link")
+count+=1
+else:
+print(url,"It is not broken link")
+------------------------------------------------------------------------------------------------------------------------
+
+3) Dropdown- Is not a single element, it contain number of options and every option is a web element.To perform the
+action on dropdown we have "select class" to use we have to import it.
+
+--> Dropdown & it's different methods-
+1) select_by_index()
+2) select_by_value()
+3) select_by_visible_text() -----> Preferred
+
+from selenium import webdriver
+driver=webdriver.Chrome()
+driver.get("Facebook")
+driver.maximize_window()
+country=select(driver.find_element(By.XPATH,"//select[@id='countries']")
+country.select_by_visible_text("India")
+
+--> Total number of options in dropdown-
+
+all = country.option
+print("Total Options=",len(all))
+
+
+
+
 
 
 

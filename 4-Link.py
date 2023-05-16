@@ -3,14 +3,14 @@ import time
 
 import requests as requests
 from selenium import webdriver
-#driver=webdriver.Chrome()
-#from selenium.webdriver.common.by import By
-#driver.get('https://demo.nopcommerce.com/')
-#driver.maximize_window()
+driver=webdriver.Chrome()
+from selenium.webdriver.common.by import By
+driver.get('https://demo.nopcommerce.com/')
+driver.maximize_window()
 
 # Select single link
 
-#driver.find_element(By.LINK_TEXT,'Digital downloads').click()
+driver.find_element(By.LINK_TEXT,'Digital downloads').click()
 
 # Total no. of links
 
@@ -18,7 +18,7 @@ from selenium import webdriver
 #print(len(Link))
 #for Links in Link:
  #   print(Links.text)
-
+'''import requests
 # Broken Links
 
 from selenium import webdriver
@@ -39,5 +39,5 @@ for link in alllinks:
      print(URL,"Broken Link")
                                                                               #count+=1
     else:
-     print(URL,"Valid Link")
+     print(URL,"Valid Link")'''
                                                                               #print("Total no of broken links:",count)

@@ -1,6 +1,6 @@
 # Alerts
 
-import time
+'''import time
 from selenium import webdriver
 driver=webdriver.Chrome()
 from selenium.webdriver.common.by import By
@@ -15,7 +15,7 @@ time.sleep(2)
 #alerts.accept()
 alerts.dismiss()
 time.sleep(5)
-driver.quit()
+#driver.quit()'''
 
 # Authentication Popup (Used Injection method providing username and password)
 
@@ -67,7 +67,7 @@ driver.quit()'''
 
 # Browser window (Need to pass window ID)
 
-'''import time
+import time
 from selenium import webdriver
 driver=webdriver.Chrome()
 driver.implicitly_wait(10)
@@ -77,11 +77,12 @@ driver.maximize_window()
 time.sleep(3)
 driver.find_element(By.XPATH,'/html/body/div/div[1]/div/div[1]/div/div[2]/div[3]/div[2]/p[2]/a').click()
 wid=driver.window_handles
+print(wid)
 PW=wid[0]
 CW=wid[1]
 driver.switch_to.window(CW)
-driver.find_element(By.XPATH,'//*[@id="linkadd"]').click()
-#driver.quit()'''
+driver.find_element(By.XPATH,'//*[@id="navbarSupportedContent"]/div[2]/ul/li[1]/a/button').click()
+#driver.quit()
 
 '''for winid in wid:
     driver.switch_to.window(winid)

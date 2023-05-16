@@ -1,10 +1,10 @@
-'''import time
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 driver=webdriver.Chrome()
 driver.get('https://demo.nopcommerce.com/')
-driver.maximize_window()'''
+driver.maximize_window()
 
 # ID and NAME
 
@@ -27,12 +27,12 @@ driver.close()'''
 
 # CLASS_NAME and TAG_NAME(Find Multiple Elements)
 
-import time
+'''import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 driver=webdriver.Chrome()
-driver.get('http://automationpractice.com/index.php')
+driver.get('http:https://www.slideshare.net/biswajitcet13/automation-testing-47645802')
 driver.maximize_window()
 sliders=driver.find_elements(By.CLASS_NAME,'homeslider-container')
 print(len(sliders))
@@ -40,7 +40,7 @@ time.sleep(3)
 Links=driver.find_elements(By.TAG_NAME,'a')
 print(len(Links))
 time.sleep(3)
-driver.close()
+driver.close()'''
 
 
 #CSS_SELECTOR and XPATH (Customized Locators)

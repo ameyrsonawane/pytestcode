@@ -1,5 +1,5 @@
 import logging
-logging.basicConfig(filename="log file.txt",
+logging.basicConfig(filename="21-log file.txt",
                     filemode='a',
                     format='%(asctime)s %(levelname)s-%(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')

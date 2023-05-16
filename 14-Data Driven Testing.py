@@ -6,35 +6,42 @@
 # By openpyxl module we can work with Excel files(.xlsx) '''
 
 
+
 # How to Read data from Excel
 
-'''import openpyxl
-path="D:\Selenium\Calling Data.xlsx"
-workbook=openpyxl.load_workbook(path)
-sheet=workbook["Call History"]
-Rows=sheet.max_row
-Columns=sheet.max_column
-print("No of Rows",Rows)
-print("No of Columns",Columns)
-for r in range(1,Rows+1):
-  for c in range(1,Columns+1):
-      print(sheet.cell(r,c).value,end='         ')
-      print()'''
+from openpyxl import load_workbook
+wb= load_workbook(filename="C:\\Users\\ameys\\OneDrive\\Desktop\\Amey.xlsx")
 
-# How to Write data in to Excel
+ws1=wb.active              # Read Data From Sheet-1
+print(ws1['A3'].value)
 
-'''import openpyxl
-path="D:\Selenium\Calling Data.xlsx"
-workbook=openpyxl.load_workbook(path)
-sheet=workbook["xyz"]
-Rows=sheet.max_row
-Columns=sheet.max_column
-print("No of Rows",Rows)
-print("No of Columns",Columns)
-for r in range(1,Rows+1):
-  for c in range(1,Columns+1):
-      print(sheet.cell(r,c).value,end='         ')
-      print()'''
+ws2=wb['Test Data-2']      # Read Data From Sheet-2
+print(ws2['A3'].value)
 
 
-# THIS FILE NOT COMPLETED
+row= ws1.max_row            # Number of Rows and Columns
+column= ws1.max_column
+print(row)
+print(column)
+
+# Read All data from excel
+
+for i in range(1,row+1):
+    for j in range(1,column+1):
+        print(ws1.cell(row=i,column=j).value,end='         ')
+
+
+
+
+# How to Write data from Excel
+
+'''from openpyxl import Workbook
+wb=Workbook()
+ws=wb.active
+#ws['A5']="Kalpak"
+data=[['Name','Department','Address'],['Kalpak','Maths','Nashik'],['Pooja','Sci','Pune']]
+for test in data:
+    ws.append(test)
+wb.save("C:\\Users\\ameys\\OneDrive\\Desktop\\Report.xlsx")'''
+
+
